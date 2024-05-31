@@ -1,0 +1,532 @@
+@use 'colors';
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+@font-face {
+  font-family: 'robotech';
+  src: url("/src/fonts/robotech.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aptos Black';
+  src: url("/src/fonts/aptos-black.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.target {
+    font-kerning: none;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, main {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+    line-height: normal;
+    color: colors.$gray-900;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* font size */
+.title-1 {
+  font-size: clamp(3.25rem, 3.0893rem + 0.8036vw, 3.8125rem);
+}
+
+.title-2 {
+  font-size: clamp(2.25rem, 2.0714rem + 0.8929vw, 2.875rem);
+}
+
+.title-3 {
+  font-size: clamp(2rem, 1.9643rem + 0.1786vw, 2.125rem);
+}
+
+.title-4 {
+  font-size: clamp(1.5625rem, 1.5089rem + 0.2679vw, 1.75rem);
+}
+
+.title-5 {
+  font-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1.1875rem);
+}
+
+.par {
+  font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+}
+
+.red {
+  color: red;
+  font-weight: 700!important;
+}
+
+.yellow {
+  color: #F6CF2B;
+}
+
+.blue {
+  color: colors.$blue-500;
+}
+
+.light-blue {
+  color: #01C5D5;
+}
+
+.green {
+  color: #54AD46;
+}
+
+.orange {
+  color: #EE8D1C;
+}
+
+.yellow-bg {
+  background-color: #F6CF2B;
+}
+
+.blue-bg {
+  background-color: #01C5D5;
+}
+
+.green-bg {
+  background-color: #54AD46;
+}
+
+.orange-bg {
+  background-color: #EE8D1C;
+}
+
+.ultra {
+  color: colors.$gray-100;
+  font-weight: 700;
+  background-color: #F6CF2B;
+  border-top-left-radius: 6px;
+}
+
+.light {
+  color: colors.$gray-100;
+  font-weight: 700;
+  background-color: #01C5D5;
+}
+
+.estandar {
+  color: colors.$gray-100;
+  font-weight: 700;
+  background-color: #54AD46;
+}
+
+
+.premium {
+  color: colors.$gray-100;
+  font-weight: 700;
+  background-color: #EE8D1C;
+  padding: 6px;
+  border-top-right-radius: 6px;
+}
+
+.separador {
+  color: colors.$blue-900;
+  font-weight: 800!important;
+  text-transform: uppercase;
+}
+
+.table-img img {
+  width: 10vw;
+}
+
+.reset {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 200vh;
+  z-index: -1;
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.2;
+  background-image: url("/src/media/assets/gas-2.png");
+  background-size: cover;
+}
+
+a {
+    cursor: pointer;
+}
+
+.btn {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+  line-height: normal;
+  color: colors.$gray-100;
+  padding: 0;
+  cursor: pointer;
+  z-index: 5;
+  position: relative;
+}
+
+.shadow {
+  box-shadow:
+  0 10px 20px rgba(0, 0, 0, 0.15),
+  0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.front {
+  position: relative;
+  z-index: 5;
+}
+
+.mask {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.wa-button {
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
+  z-index: 9999;
+  width: fit-content;
+
+  & img {
+    width: 5em;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+  }
+}
+
+/*Main section CSS*/
+#particles-js {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  opacity: 90%;
+}
+
+header {
+  position: fixed!important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid colors.$blue-100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 2vh 8vw;
+  z-index: 999;
+
+  & img {
+    width: 148px;
+  }
+
+  & .menu {
+    display: flex;
+    gap: 1em;
+
+    & a {
+      color: colors.$blue-900;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 8px 0;
+
+      &:last-child {
+        background: linear-gradient(100deg, #03B3C4 35.19%, #00C5D5 50%, #03B3C4 64.81%);
+        padding: 8px 12px;
+        border-radius: 50px;
+        z-index: 5;
+        cursor: pointer;
+        
+        & p {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2em;
+    min-height: 100vh;
+    padding: 24vh 8vw;
+    z-index: 15;
+
+    & .title-con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+
+      & .pet {
+        width: 72px;
+    }
+    }
+  
+    & .faq {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        backdrop-filter: blur(8px);
+        padding: 1.5em 2em;
+        border-radius: 1em;
+        border: 1px solid colors.$gray-300;
+        font-family: "Manrope", sans-serif;
+        width: 80%;
+
+        & details {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid colors.$blue-100;
+            overflow: hidden;
+        }
+    
+        & .pregunta {
+            cursor: pointer;
+            padding: 0.5em 0;
+            list-style: none;
+            position: relative;
+            font-weight: 700;
+            color: colors.$blue-400;
+        }
+
+        & .respuesta {
+            font-weight: 600;
+            padding: 0.5em 0;
+        }
+
+        & ul {
+
+            & li {
+                font-weight: 600;
+                padding: 0.2em 0;
+            }
+        }
+
+        & ol {
+
+            & li {
+                font-weight: 600;
+                padding: 0.2em 0;
+                list-style: lower-alpha;
+                margin-top: 1.5em;
+            }
+
+            & ul {
+
+                & li {
+                    font-weight: 600;
+                    padding: 0.2em 0;
+                    list-style: disc;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 8vh 8vw;
+  background: url("/src/media/assets/gas-2.png");
+  background-position: bottom;
+
+  & .adress {
+    color: colors.$gray-100;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  & .social-con {
+    display: flex;
+    gap: 1em;
+
+  }
+
+  & .legal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+
+    & .legal-txt {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+  
+}
+
+.derechos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4vh 8vw;
+  background-color: colors.$blue-900;
+  
+  & .derechos-txt {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  header {
+    position: fixed!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid colors.$blue-100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 2vh 8vw;
+    z-index: 999;
+    gap: 1em;
+  
+    & img {
+      width: 88px;
+    }
+  
+    & .menu {
+      display: flex;
+      gap: 1em;
+  
+      & a {
+        color: colors.$blue-900;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 800;
+        padding: 8px 0;
+  
+        &:last-child {
+          background: linear-gradient(100deg, #03B3C4 35.19%, #00C5D5 50%, #03B3C4 64.81%);
+          padding: 8px 12px;
+          border-radius: 50px;
+          z-index: 5;
+          cursor: pointer;
+          
+          & p {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .faq {
+    width: 100%!important;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 8vh 8vw;
+    background: url("/src/media/assets/gas-2.png");
+    background-position: bottom;
+
+    & .adress {
+      color: colors.$gray-100;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    & .social-con {
+      display: flex;
+      gap: 1em;
+
+    }
+
+    & .legal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5em;
+
+      & .legal-txt {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+    
+  }
+
+  .derechos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 4vh 8vw;
+    background-color: colors.$blue-900;
+    
+    & .derechos-txt {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}

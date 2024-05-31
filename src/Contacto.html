@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="/src/sass/reset.css">
+    <link rel="stylesheet" href="/src/sass/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="/src/media/ico/favico.png" type="image/png">
+</head>
+<body>
+    <header class="main-menu">
+        <a href="https://a30express.com.mx">
+            <img src="/src/media/ico/logo-a30.png" alt="Logo A30 Express" class="logo-header">
+        </a>
+        <nav class="menu">
+            <a href="/src/index.html">
+                <p class="menu-item par">Inicio</p>
+            </a>
+            <a href="/src/index.html/#soluciones">
+                <p class="menu-item par">Soluciones</p>
+            </a>
+            <a href="#">
+                <p class="menu-item par">Blog</p>
+            </a>
+            <a href="/src/FAQ.html">
+                <p class="menu-item par">FAQ</p>
+            </a>
+            <a href="/src/Contacto.html">
+                <p class="menu-item par">Contacto</p>
+            </a>
+        </nav>
+    </header>
+    <div id="particles-js"></div>
+    <main>
+        <a href="https://wa.me/+524428113423" class="wa-button">
+            <img src="/src/media/ico/wa-button.png" alt="">
+        </a>
+        <!--hero-->
+        <section class="hero front">
+            <div class="title-con">
+                <img src="/src/media/assets/pet.png" alt="" class="pet hide">
+                <h2 class="title-3">Contáctanos</h2>
+            </div>
+            <div class="contact-content front">
+                <div class="reset contact-wrapper">
+                  <div class="contact-card">
+                    <!--contact data-->
+                    <div class="contact-data">
+                      <!--phone-->
+                      <div class="phone-numbers">
+                        <div class="phone">
+                            <img src="/src/media/ico/phone-ico.svg" alt="">
+                          <a href="tel:+524428113423" class="par">442 811 3423</a>
+                        </div>
+                      </div>
+                      <!--mail-->
+                      <div class="mail">
+                        <img src="/src/media/ico/mailto-ico.svg" alt="">
+                        <a href="mailto:contacto@a30express.com.mx" class="par">contacto@a30express.com.mx</a>
+                      </div>
+                    </div>
+                    <!--contact form-->
+                    <form id="contactForm" method="POST" action="https://formsubmit.co/contacto@a30express.com.mx">
+                      <div class="name-phone">
+                        <div class="form-group">
+                          <label class="par" for="nombre">Nombre:</label>
+                          <input class="par" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                        </div>
+                        <div class="form-group">
+                          <label class="par" for="telefono">Teléfono:</label>
+                          <input class="par" type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="par" for="correo">Correo:</label>
+                        <input class="par" type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="par" for="correo">Razon Social:</label>
+                        <input class="par" type="text" id="correo" name="correo" placeholder="Ingrese su Razón Social" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="par" for="asunto">Asunto:</label>
+                        <textarea id="asunto" name="asunto" placeholder="Ingrese el asunto del mensaje" required></textarea>
+                      </div>
+                      <button class="par" type="submit">Enviar</button>
+                    </form>      
+                  </div>
+                </div>
+              </div>
+        </section>
+        <!--contact-->
+        <footer class="contacto front">
+            <a href="https://maps.app.goo.gl/Q8mXP1AjL1WvGf2r8" class="adress title-5">Av. Constituyentes 120, 2do Piso, El Carrizal, 76030 Santiago de Querétaro, Qro.</a>
+            <div class="social-con">
+                <a href="https://www.facebook.com/profile.php?id=61560132560456&mibextid=LQQJ4d" target="_blank">
+                    <img src="/src/media/ico/facebook-ico.png" alt="Facebook" class="social-ico">
+                </a>
+                <a href="https://www.linkedin.com/company/a30-express/" target="_blank">
+                    <img src="/src/media/ico/in-ico.png" alt="LinkedIn" class="social-ico">
+                </a>
+                <a href="https://wa.me/+524428113423" target="_blank">
+                    <img src="/src/media/ico/wa-ico.png" alt="WhatsApp" class="social-ico">
+                </a>
+                <a href="mailto:contacto@a30express.com.mx" target="_blank">
+                    <img src="/src/media/ico/mail-ico.png" alt="Email" class="social-ico">
+                </a>
+                <a href="https://www.instagram.com/a30_express?igsh=a2w0dWUwamtqY29k" target="_blank">
+                    <img src="/src/media/ico/ig-ico.png" alt="Instagram" class="social-ico">
+                </a>
+            </div>
+            <div class="legal">
+                <a class="legal-txt par">Aviso de Privacidad</a>
+                <a class="legal-txt par">Aviso de Confidencialidad</a>
+            </div>
+        </footer>
+        <section class="derechos front">
+            <h5 class="derechos-txt par">A30 Express. Todos los Derechos Reservados. 2024.</h5>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script type="module" src="/src/js/gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="/src/js/particles.js"></script>
+</body>
+</html>
